@@ -45,7 +45,7 @@ const MessageBubbleWrapper = styled(motion.div)<{ isMine?: boolean }>`
 
 const Time = styled.time`
   opacity: 0.4;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: ${(props) => props.theme.colors.charcoalGreyTwo};
   width: 32px;

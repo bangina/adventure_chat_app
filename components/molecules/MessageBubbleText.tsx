@@ -14,8 +14,8 @@ function MessageBubbleText({ isMine, text }: MessageBubbleTextProps) {
 
 const MessageBubble = styled.div<{ isMine?: boolean }>`
   padding: 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px 0 ${(props) => (props.isMine ? props.theme.colors.primary : props.theme.colors.black10)};
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 ${(props) => (props.isMine ? props.theme.colors.primary : props.theme.colors.black10)};
   background-color: ${(props) => (props.isMine ? props.theme.colors.primary : props.theme.colors.white)};
 `;
 const Text = styled.p<{ isMine?: boolean }>`

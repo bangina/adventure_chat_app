@@ -7,7 +7,7 @@ export default function MessageInputBar({ value, onSubmit, onChange, loading }) 
     <MessageInputWrapper onSubmit={onSubmit}>
       <MessageInput onChange={onChange} value={value} />
       <MessageInputButton type='button' onClick={onSubmit}>
-        {loading ? <img src={LOADING_SPINNER} width={20} height={20} alt='send button' /> : <InvertedIcon src={IC_IMG_SEND} width={26} alt='send button' />
+        {loading ? <img src={LOADING_SPINNER} width={20} height={20} alt='send button' /> : <InvertedIcon src={IC_IMG_SEND} width={20} alt='send button' />
         }
       </MessageInputButton>
     </MessageInputWrapper>

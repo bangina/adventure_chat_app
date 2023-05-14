@@ -1,15 +1,25 @@
 import RoomPreviewCard from "@/components/molecules/RoomPreviewCard";
-import RoomListNavBar from "feature/components/pages/list/RoomListNavBar";
 import { getRoomList } from "@/services/apis/room";
 import { RoomResponseType } from "@/types/message";
 import { formatHHMM } from "@/utils/formatHHMM";
-import { GetServerSideProps } from "next";
+import RoomListNavBar from "feature/components/pages/list/RoomListNavBar";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect, useState } from 'react';
 
-function RoomListPage({ roomListData }) {
+function RoomListPage() {
+  const [roomList, setRoomList] = useState<RoomResponseType[]>([]);
+  const getRoomListData = async () => {
+    const response = await getRoomList();
+    setRoomList(response);
+  }
   const router = useRouter();
   const handleClickRoomCard = (roomId: number | string) => router.push(`/room/${roomId}`);
+
+  useEffect(() => {
+    getRoomListData()
+  }, []);
+
   return (
     <div>
       <Head>
@@ -21,7 +31,7 @@ function RoomListPage({ roomListData }) {
       <RoomListNavBar title={"채팅"} />
 
       <main>
-        {roomListData.map((room) => (
+        {roomList?.map((room) => (
           <RoomPreviewCard
             src={room.user.avatar}
             unread_count={room.unread_count}
@@ -29,7 +39,7 @@ function RoomListPage({ roomListData }) {
             last_message={room.messages[0].text}
             time={formatHHMM(room.messages[0].sent_at)}
             onClick={() => handleClickRoomCard(room.id)}
-            key={room.id}
+            key={room.id+ 'roomPreviewCard'}
           />
         ))}
       </main>
@@ -41,12 +51,5 @@ type Data = {
   roomListData: RoomResponseType[];
 };
 
-export const getServerSideProps: GetServerSideProps<Data> = async () => {
-  const roomListData = await getRoomList();
-  return {
-    props: {
-      roomListData,
-    },
-  };
-};
+
 export default RoomListPage;

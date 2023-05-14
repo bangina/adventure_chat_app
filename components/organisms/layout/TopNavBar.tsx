@@ -13,4 +13,5 @@ const TopNavBar = styled.nav`
   flex-flow: row wrap;
   padding: 28px 12px 12px;
   background-color: ${(props) => props.theme.colors.primary};
+  text-transform: capitalize;  
 `;
