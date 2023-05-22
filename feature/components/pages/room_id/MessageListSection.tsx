@@ -4,6 +4,7 @@ import { axiosPost } from "@/libs/axiosHelper";
 import useRecoilMessageList from "@/libs/recoil_atoms/messageList/useRecoilMessageList";
 import { memo, useId, useState } from "react";
 import styled from "styled-components";
+import MessageBubble from "feature/components/pages/room_id/MessageBubble";
 
 function MessageListSection() {
   const { updateMessage, messageList } = useRecoilMessageList();
