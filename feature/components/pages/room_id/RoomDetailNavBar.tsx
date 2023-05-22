@@ -6,7 +6,7 @@ import { SAVED_IMAGES } from "@/data/constants/saved_images";
 import { MessageTypeEnum } from "@/types/message";
 import createMotionVariants from "@/utils/createMotionVariants";
 import { motion } from "framer-motion";
-import useRecoilMessageList from "libs/recoil_atoms/messageList/useRecoilMessageList";
+import useRecoilMessageList from "@/libs/recoil_atoms/messageList/useRecoilMessageList";
 import { useRouter } from "next/router";
 import { useId, useState } from "react";
 import styled from "styled-components";

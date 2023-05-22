@@ -1,5 +1,5 @@
 import { RoomResponseType } from "@/types/message";
-import { axiosGet } from "libs/axiosHelper";
+import { axiosGet } from "@/libs/axiosHelper";
 
 /**
  *
