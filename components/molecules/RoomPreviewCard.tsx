@@ -24,7 +24,7 @@ export default function RoomPreviewCard({ src, unread_count, user_name, last_mes
     <Container
       key={user_name}
      onClick={onClick} variants={variants} initial='initial' animate='in' exit='out'>
-      <AvatarImg src={src} alt={"user profile image"} />
+      <AvatarImg src={src} alt="user profile image" />
       <div css={{ paddingLeft: 15, flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
         <div css={{ color: theme.colors.charcoalGrey, letterSpacing: -0.2, fontSize: 16, paddingBottom: 3 }}>{user_name}</div>
         <div css={{ color: theme.colors.coolGrey, fontSize: 13 }}>{last_message}</div>

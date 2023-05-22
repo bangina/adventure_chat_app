@@ -11,7 +11,7 @@ function HomePage() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Link href={"/list"}>
+      <Link href='/list'>
         <Button>채팅 리스트 페이지 가기</Button>
       </Link>
     </Container>
