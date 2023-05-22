@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { IC_IMG_SEND, LOADING_SPINNER } from "@/data/constants/icons";
-import InvertedIcon from '../atoms/InvertedIcon';
+import InvertedIcon from "@/components/atoms/InvertedIcon";
 
 export default function MessageInputBar({ value, onSubmit, onChange, loading }) {
   return (
     <MessageInputWrapper onSubmit={onSubmit}>
       <MessageInput onChange={onChange} value={value} />
       <MessageInputButton type='button' onClick={onSubmit}>
-        {loading ? <img src={LOADING_SPINNER} width={20} height={20} alt='send button' /> : <InvertedIcon src={IC_IMG_SEND} width={20} alt='send button' />
-        }
+        {loading ? <img src={LOADING_SPINNER} width={20} height={20} alt='send button' /> : <InvertedIcon src={IC_IMG_SEND} width={20} alt='send button' />}
       </MessageInputButton>
     </MessageInputWrapper>
   );

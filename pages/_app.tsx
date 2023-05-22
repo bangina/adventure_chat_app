@@ -1,10 +1,10 @@
 import type { AppProps } from "next/app";
 import localFont from "next/font/local";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../assets/css/globalStyles";
-import { theme } from "../assets/css/theme";
 import { RecoilRoot } from "recoil";
 import { AnimatePresence } from "framer-motion";
+import GlobalStyle from "@/assets/css/globalStyles";
+import { theme } from "@/assets/css/theme";
 
 const myFont = localFont({
   src: [

@@ -1,10 +1,9 @@
+import MessageInputBar from "@/components/molecules/MessageInputBar";
 import { DisplayMessageType, MessageType, MessageTypeEnum } from "@/types/message";
 import { axiosPost } from "libs/axiosHelper";
 import useRecoilMessageList from "libs/recoil_atoms/messageList/useRecoilMessageList";
 import { memo, useId, useState } from "react";
 import styled from "styled-components";
-import MessageInputBar from "../../../../components/molecules/MessageInputBar";
-import MessageBubble from "./MessageBubble";
 
 function MessageListSection() {
   const { updateMessage, messageList } = useRecoilMessageList();
@@ -28,7 +27,7 @@ function MessageListSection() {
         type: MessageTypeEnum.TEXT,
       },
     };
-    
+
     updateMessage((prevMessageList) => [...prevMessageList, { ...messageDataObj.data }]);
     postNewMessageToServer(messageDataObj).then((response) => {
       setSendMessageLoading(false);

@@ -3,10 +3,10 @@ import { RoomResponseType, UserResponseType } from "@/types/message";
 import useRecoilMessageList from "libs/recoil_atoms/messageList/useRecoilMessageList";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { useEffect } from "react";
-import MessageListSection from "../../feature/components/pages/room_id/MessageListSection";
-import RoomDetailNavBar from "../../feature/components/pages/room_id/RoomDetailNavBar";
 import Head from "next/head";
 import { getUserDetail } from "@/services/apis/user";
+import MessageListSection from 'feature/components/pages/room_id/MessageListSection';
+import RoomDetailNavBar from 'feature/components/pages/room_id/RoomDetailNavBar';
 
 function RoomDetailPage({ userData, roomData }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { updateMessage } = useRecoilMessageList();

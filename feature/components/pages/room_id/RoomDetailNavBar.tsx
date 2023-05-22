@@ -1,6 +1,7 @@
 import { TextS3 } from "@/assets/css/sharedStyles";
 import { theme } from "@/assets/css/theme";
-import { IC_IMG_BACK, IC_IMG_SEARCH, IC_IMG_UPLOAD } from "@/data/constants/icons";
+import InvertedIcon from "@/components/atoms/InvertedIcon";
+import { IC_IMG_BACK, IC_IMG_UPLOAD } from "@/data/constants/icons";
 import { SAVED_IMAGES } from "@/data/constants/saved_images";
 import { MessageTypeEnum } from "@/types/message";
 import createMotionVariants from "@/utils/createMotionVariants";
@@ -9,9 +10,8 @@ import useRecoilMessageList from "libs/recoil_atoms/messageList/useRecoilMessage
 import { useRouter } from "next/router";
 import { useId, useState } from "react";
 import styled from "styled-components";
-import RoundedImg from "../../../../components/atoms/RoundedImg";
-import TopNavBar from "../../../../components/organisms/layout/TopNavBar";
-import InvertedIcon from '@/components/atoms/InvertedIcon';
+import RoundedImg from "@/components/atoms/RoundedImg";
+import TopNavBar from "@/components/organisms/layout/TopNavBar";
 
 interface RoomDetailNavBarProps {
   title: string;
@@ -83,7 +83,6 @@ export default function RoomDetailNavBar({ title }: RoomDetailNavBarProps) {
           <IconButton onClick={handleClickImageUploadBtn} {...animationCommonProps}>
             <InvertedIcon src={IC_IMG_UPLOAD} alt='upload image' width={24} height={24} />
           </IconButton>
-          
         </div>
       </TopNavBar>
 

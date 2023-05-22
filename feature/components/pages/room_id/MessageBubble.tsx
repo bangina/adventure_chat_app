@@ -1,3 +1,5 @@
+import DateDivider from "@/components/molecules/DateDivider";
+import MessageBubbleImg from "@/components/molecules/MessageBubbleImg";
 import MessageBubbleText from "@/components/molecules/MessageBubbleText";
 import { DisplayMessageType, MessageTypeEnum } from "@/types/message";
 import createMotionVariants from "@/utils/createMotionVariants";
@@ -5,8 +7,6 @@ import useScrollMessageBubble from "feature/hooks/pages/room_id/useScrollMessage
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import DateDivider from "../../../../components/molecules/DateDivider";
-import MessageBubbleImg from "../../../../components/molecules/MessageBubbleImg";
 
 interface MessageBubbleProps {
   message: DisplayMessageType;
